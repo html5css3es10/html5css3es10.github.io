@@ -2,265 +2,118 @@
 <html lang="en">
 <head>
 	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Learn HTML5, CSS3 and ES10. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://html5css3es10.github.io/security.ico" />
+    	 <title> Information Technology 2020. </title>
+	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
+	<link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
+	<style>
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		width: 500px;
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+		background: -moz-linear-gradient(#fff, #999);
+		background: -webkit-linear-gradient(#fff, #999);
+		background: -o-linear-gradient(#fff, #999);
+	}
+
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #00d9ff; }
+	</style>
+    <style>
+        body {
+            background-size:100% auto;
+			background-color: #000;
+            background-image: url("https://informationtechnology2020.github.io/beach.jpg");
+        }
+    </style>  
+    <script>
+        function nextPage(){
+			let x = document.getElementById("txtPassword").value;
+			
+			
+                if (x === "Pa$$w0rd"){
+                    window.location.replace("https://html5css3es10.github.io/frontpage.html");
+				}
+				else {
+					alert("Wrong password. Please type it again.");
+				}
+                
+        }
+      
+      </script>
+
 </head>
-<body oncontextmenu="alert('Smile!');return false;" onselectstart="return false" ondragstart="return false">
+<body oncontextmenu="alert('Smile. Relax. Take it easy.');return false;" onselectstart="return false" ondragstart="return false">
 <br>
 <div class="container">
 
-	<div   style="text-align:center;font-family: cursive;">
-        <h1>HTML5, CSS3 and ES10 (ECMAScript).</h1>
+	<div   style="text-align:center;font-size: 200%">
+        <span style="color: yellow;">
+            <strong>Welcome    to Information Technology 2020.</strong>   </span>
         <br>
-        <blockquote><legend>Get these textbooks and spend several hours per day studying them:</legend>
-        <a href="https://www.tinyurl.com/html5css3es10" target="_blank" class="btn btn-block btn-secondary">Textbooks to get started with HTML5, CSS3 and Javascript.</a>
-        </blockquote>
-        <hr>
-    </div>
+        <br>
 
-    <div style="font-size: 150%;">
-    <h2><u>Exercise 1:</u>&nbsp; Creating our first HTML and CSS files.</h2>
-        <br>
-        <ol type="I"> 
-       <li>  <h3> Create a folder named <strong>Labs </strong> on your Desktop.    
+            <a href="#openModal" class="btn btn-warning btn-lg">
+        <strong>C o n t i n u e </strong></a>
         
-        </h3></li>
-        <li> <h3>
-            Create a folder named <strong>Exercise1</strong> within the Labs folder.
-        </h3></li>
-        <li> <h3>
-            Create a new text file named <strong>Code.html</strong> within the Exercise1 folder, open it with Brackets and add this code:
-        </h3></li><br>
-        <img src="https://html5css3es10.github.io/htmlexercise01.png" class="img img-fluid">
-        <li> <h3>
-            Use the Live Preview icon on the upper right corner to see your web page.
-        </h3></li>
-    </ol>
-    </div>
-    
-	<br>
-    <div style="font-size: 150%;">
-        <ol type="I" start="5"> 
-       <li>  <h3>
-            Still within the same Exercise1 folder, create a new text file named <strong>Style.css</strong>, open it with Brackets and add this code:
-        </h3></li>
-        <img src="https://html5css3es10.github.io/cssexercise01.png" class="img img-fluid">
-        <li><h3>
-            Save the CSS file, go back to the Code.html file, and use the Live Preview icon on the upper right corner to see your web page. Noticed the change?
-        </h3></li>
-    </ol>
-    </div>
-    <hr>
-    <div style="font-size: 150%;">
-    <h2><u>Exercise 2:</u>&nbsp; Working with the HTML/CSS exercises of our textbook.</h2>
+        </div>
+
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Type our usual password:</h2>
+		<input type="password" id="txtPassword" class="form-control" placeholder="Pa$$w0rd">
         <br>
-        <ol type="I"> 
-        
-            <li><h3>
-                Install Firefox from <a href="https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com" target="_blank">right here</a>.
-            </h3></li>
-            
-            <li><h3>
-               Use the Firefox web browser to access <a href="http://www.htmlandcssbook.com/code-samples/" target="_blank">the Jon Duckett HTML5 and CSS3 book</a> online code samples and go through <i>every</i> single chapter: Structure, Text, Lists, Links, ..., HTML5 Layout. For every HTML file view the source code. Read it carefully. In case of doubt go back to the book itself. Everything is neatly explained there. The reason to use Firefox instead of Chrome is that the view source is better shown in FF. Test it yourself. 
-            </h3></li>
-            
-            
-        </ol>
-    </div>
-    <hr>
-    <div style="font-size: 150%;">
-    <h2><u>Exercise 3:</u>&nbsp; Hello World! in Javascript.</h2>
-        <br>
-        <ol type="I">
-            <li> Create a folder named JS on your desktop.                </li>
-            <li> Create a file named exercise3.html within the JS folder.               </li>
-            <li> Write the code below:               </li>
-            <img src="https://html5css3es10.github.io/javascript01.png" class="img img-fluid">         
-        </ol>
-        
-    </div>
-    <hr>
-    <div style="font-size: 150%;">
-    <h2><u>Exercise 4:</u>&nbsp; Another simple JS example.</h2>
-        <br>
-        <ol type="I">
-            
-            <li> Create a file named exercise4.html within the JS folder.               </li>
-            <li> Write the code below. Just make a copy of the previous file and modify it.               </li>
-            <img src="https://html5css3es10.github.io/javascript02.png" class="img img-fluid">         
-        </ol>
-        
-    </div>
-    <hr>
-    <div style="font-size: 150%;">
-    <h2><u>Exercise 5:</u>&nbsp; Bunch of JS exercises from W3Schools. Run the <kbd>Try it yourself</kbd> green buttons.</h2>
-        <br>
-        <ol type="I">
-            
-            <li> Work on these exercises about <a href="https://www.w3schools.com/js/js_functions.asp" target="_blank" class="btn btn-block btn-lg btn-warning">
-                 Javascript Functions
-                </a>              </li>
-            
-            <li> Work on these exercises about <a href="https://www.w3schools.com/js/js_objects.asp" target="_blank" class="btn btn-block btn-lg btn-warning">
-                 Javascript Objects
-                </a>              </li>
-            
-            <li> Work on these exercises about <a href="https://www.w3schools.com/js/js_events.asp" target="_blank" class="btn btn-block btn-lg btn-warning">
-                 Javascript Events
-                </a>              </li>
-            
-            <li> Work on these exercises about <a href="https://www.w3schools.com/js/js_this.asp" target="_blank" class="btn btn-block btn-lg btn-warning">
-                 Javascript <strong>this</strong>
-                </a>              </li>
-            
-            <li> Work on these exercises about <a href="https://www.w3schools.com/js/js_let.asp" target="_blank" class="btn btn-block btn-lg btn-warning">
-                 Javascript <strong>let</strong> 
-                </a>              </li>
-            
-            <li> Work on these exercises about <a href="https://www.w3schools.com/js/js_const.asp" target="_blank" class="btn btn-block btn-lg btn-warning">
-                 Javascript  <strong>const</strong>
-                </a>              </li>
-            
-            <li> Work on these exercises about <a href="https://www.w3schools.com/js/js_arrow_function.asp" target="_blank" class="btn btn-block btn-lg btn-warning">
-                 Javascript  Arrow Functions
-                </a>              </li>
-            
-            <li> Work on these exercises about <a href="https://www.w3schools.com/js/js_classes.asp" target="_blank" class="btn btn-block btn-lg btn-warning">
-                 Javascript  Classes (yes they do exist now in Javascript)
-                </a>              </li>
-            
-            <li> Work on these exercises about <a href="https://www.w3schools.com/js/js_es6.asp" target="_blank" class="btn btn-block btn-lg btn-warning">
-                 Javascript  <strong>ES6</strong> features. This version of ECMAScript started the <i>revolution</i>. 
-                </a> The actual version is ES10 (or ECMAScript 2019) which is more like an evolution of ES6.            </li>
-                   
-        </ol>
-        
-    </div>
-    <hr>
-    <div style="font-size: 150%;">
-    <h2><u>Exercise 6:</u>&nbsp; A Javascript encyclopedia, really.</h2>
-        <br>
-        <ol type="I">
-            
-            <li>Just browse thru 
-            <a href="https://javascript.info/" target="_blank">this spectacular source</a> of information. Don't be intimidated by the amount of info. Spend a few minutes checking out this excellent reference. 
-            </li>        
-        </ol>
-        
-    </div>
-    <hr>
-    <br>
-    
+        <button type="submit" onclick="nextPage()" class="btn btn-warning btn-lg btn-block">
+        <strong>Continue</strong></button>
+	</div>
 </div>
-<br>
-<hr>
-<hr>
-<div class="container" style="text-align:center;font-family: cursive; font-size: 150%;">
-    
-    <p><strong>Check the links shown below. Immerse yourself in Javascript!</strong></p>
-    
-    <a href="https://www.youtube.com/watch?v=b1ieJtIx1NY" target="_blank" class="btn btn-block btn-lg btn-info">
-How Javascript works (short video)
-</a>
-
-<br>
-
-
-<a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank" class="btn btn-block btn-lg btn-info">
-A must see video: What the heck is the event loop anyway? by Philip Roberts 
-</a>
-
-<br>
-
-<a href="https://www.youtube.com/watch?v=06FbxpDYEQY&list=PLC3y8-rFHvwjpiZ3nGb1J0_j2qxFkmHf2&index=4" target="_blank" class="btn btn-block btn-lg btn-info">
-8 Must Know JavaScript Concepts
-</a>
-
-<br>
-
-<a href="https://www.youtube.com/watch?v=48Qe0R_VGx4&list=PLC3y8-rFHvwjpiZ3nGb1J0_j2qxFkmHf2&index=5" target="_blank" class="btn btn-block btn-lg btn-info">
-7 ES6 Features to Get Started
-</a>
-
-<br>
-
-
-<a href="https://www.youtube.com/watch?v=n3zrCxB8sj8&list=PLC3y8-rFHvwhI0V5mE9Vu6Nm-nap8EcjV" target="_blank" class="btn btn-block btn-lg btn-info">
-Javascript Tutorial (playlist)
-</a>
-
-
-
-
-
-<br>
-<!--
-<a href="https://javascript.info/" target="_blank" class="btn btn-block btn-lg btn-info">
-A Javascript Tutorial 
-</a>
--->
-
-
-
-
-<a href="https://www.youtube.com/watch?v=MY0UBGX2FtA" target="_blank" class="btn btn-block btn-lg btn-info">
-Answering Tricky JS Interview Questions
-</a>
-
-<br>
-
-<a href="https://www.youtube.com/watch?v=Bv_5Zv5c-Ts" target="_blank" class="btn btn-block btn-lg btn-info">
-Understanding the "weird" parts of Javascript
-</a>
-
-<br>
-<hr>
-<strong>And now React:</strong>
-<br>
-<br>
-
-
-<a href="https://www.youtube.com/watch?v=QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3+REACT" target="_blank" class="btn btn-block btn-lg btn-info">
-React JS Tutorial (playlist). This should be seen after watching all the above. But, you're invited to watch the first five or six to get an idea of React.
-</a>
-<br>
-<a href="https://www.tutorialspoint.com/reactjs/index.htm" target="_blank" class="btn btn-block btn-lg btn-info">
-ReactJS tutorial (from TutorialsPoint)
-</a>
-<br>
-<a href="https://scotch.io/starters/react" target="_blank" class="btn btn-info btn-lg btn-block">
-A very interesting React tutorial
-</a>
-<br>
-<a href="https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/" target="_blank" class="btn btn-block btn-lg btn-info">
-    React Tutorial: A Comprehensive Guide to learning React.js 
-</a>
-<br>
-<a href="https://ihatetomatoes.net/react-tutorial-for-beginners/" target="_blank" class="btn btn-lg btn-block btn-info">
-React Tutorial for Beginners
-</a>
-<br>
-<a href="https://www.codecademy.com/learn/react-101" target="_blank" class="btn btn-lg btn-block btn-info">
-Code Academy -> Learn React!
-</a>
-    
-    
 </div>
 
-<!-- These Javascript links are required for the proper functionality of Bootstrap. And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://informationtechnology2020.github.io/jquery.js"> </script>
+<script src="https://informationtechnology2020.github.io/popper.js"> </script>
+<script src="https://informationtechnology2020.github.io/bootstrap4.js"> </script>
 </body>
 </html>
 
