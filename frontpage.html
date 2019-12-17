@@ -310,26 +310,131 @@ Code Academy -> Learn React!
 
         <br>
         <strong>And now Adobe Dreamweaver CC 19:</strong>
+       </div>
+       <div class="container" style="text-align:left;font-family: cursive; font-size: 120%;">
         <br>
            <br>
-           <p>Download DW19 from 
-           <a href="https://drive.google.com/drive/folders/1ixlX1SHh-hCSE-ik8vnW0y1FYnJPZKGs?usp=sharing" target="_blank"> right here</a> and 
-               install it.
-           </p>
-           <p>
-               Watch this short video about Dreamweaver. It's a good introduction to this popular code editor.
-           <iframe width="853" height="480" src="https://www.youtube.com/embed/rKbvaPOvI84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-           </p>
-           <p>Time to understand the difference between LESS and SASS. Check <a href="https://blog.udemy.com/less-vs-sass/" 
-        target="_blank"> this </a> article.</p>
-        <p>
+           <ol type="I">
+            <li>
+                <p>Download DW19 from 
+                    <a href="https://drive.google.com/drive/folders/1ixlX1SHh-hCSE-ik8vnW0y1FYnJPZKGs?usp=sharing" target="_blank"> right here</a> and 
+                        install it.
+                    </p>
+            </li>
+           
+           <li>
+            <p>
+                Watch this short video about Dreamweaver. It's a good introduction to this popular code editor.
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/rKbvaPOvI84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+           </li>
+          
+           <li><p>
             Dreamweaver plus Bootstrap is a great combination. Watch <a href="https://drive.google.com/drive/folders/1PEHmpuO-JmLyL8C1vlNScTes5LreoRZg?usp=sharing" target="_blank">
-            these </a>videos to learn how to use Dreamweaver with Bootstrap 4.
-        </p>
+                these </a>videos to learn how to use Dreamweaver with Bootstrap 4.
+           </p>
+
+           </li>
+            
+        <li>
+            <p>
+                <a href="https://helpx.adobe.com/dreamweaver/tutorials.html" target="_blank">DW Tutorial 1</a> --- &nbsp;
+                <a href="https://www.hostinger.com/tutorials/dreamweaver-tutorial/" target="_blank">DW Tutorial 2</a> --- &nbsp;
+                <a href="https://websitesetup.org/dreamweaver-tutorial/" target="_blank">DW Tutorial 3</a>  &nbsp;
+            </p>
+        </li>
+        
+    </ol>
         <br>
         <br> 
+        <hr>
         </div>
     </div>
+    <div class="container" style="text-align:center;font-family: cursive; font-size: 200%;">  
+        <strong>Working with the most used CSS preprocessor: SASS.</strong>
+    </div>
+    <br>
+    <div class="container" style="text-align:left;font-family: cursive; font-size: 175%;">  
+        <ol type="I">
+            <li>
+                <p>Time to understand the difference between LESS and SASS. Check <a href="https://blog.udemy.com/less-vs-sass/" 
+                    target="_blank"> this </a> article.</p>
+                   
+              </li>
+
+            <li><p>
+                To understand what SASS is, read  <a href="https://sass-lang.com/dart-sass" target="_blank">
+                    this article </a> and <a href="https://sass-lang.com/install" target="_blank">this one </a> too.
+
+            </p></li>
+
+            <li><p>
+
+                Let's install now SASS using <strong>Chocolatey</strong> from 
+                the command prompt (as an Administrator!). To read more about this package manager,
+                just read <a href="https://en.wikipedia.org/wiki/NuGet#Chocolatey" target="_blank">this  </a>,
+                 <a href="https://chocolatey.org/" target="_blank">this </a>, 
+                <a href="https://chocolatey.org/install" target="_blank"> this </a>,
+                <a href="https://chocolatey.org/about" target="_blank"> this </a> and 
+                <a href="https://stackshare.io/chocolatey/alternatives" target="_blank">finally this </a>.
+                
+                
+                
+
+
+
+            </p></li>
+            <li><p>
+                So type: &nbsp;<code>choco install sass</code> &nbsp; &nbsp; and accept all the defaults. If you've done 
+                the ASP.NET 3 Core exercises from <a href="https://fullstackdevelopment2020.github.io/" target="_blank">
+                 here</a>, then you should already have Chocolatey installed on your PC. Otherwise, install it now. Use 
+                 the PowerShell to do that (see installation article from above) and do it as an Administrator.
+
+            </p></li>
+
+            <li><p>Now close any open CLI or PS, that is any command line interface or PowerShell.</p></li>
+
+            
+
+            <li>Open the command prompt and type: <br>
+
+                <code>cd %homedrive%%homepath%\Desktop</code> <br>
+               
+                <code>mkdir Sassy </code> <br>
+                <code>cd Sassy </code> <br>
+                <code>mkdir sass  </code> <br>
+                <code> mkdir css </code> <br>
+                <code>cd sass  </code> <br>
+                <code>type nul > index.scss   </code> <br>
+                
+            </li>
+
+            
+            <li>
+                And now let's write some SASS code: <code>notepad index.scss </code>
+            </li>
+            <li> Type this code in the index.scss file, save it and close it: <br>
+                    <code> .class1,</code><br>
+                    <code>.class2{ </code><br>
+                    <code> color:red;</code><br>
+                    <code>} </code><br>
+             
+            </li>
+            <li> Now let's tell sass to "watch" for any changes in the .scss file and translate them
+                to .css: <br>
+                <code>cd ..</code> <br>
+                <code> sass --watch sass\index.scss css\index.css</code> <br>
+                Keep this open.
+            </li>
+            <li>Open another command prompt and return to the Sassy directory. Verify that the index.css 
+                file has been created in the css folder. Read the code. Did it work?
+            </li>
+            <li>This was an intro to SASS. To learn more watch <a href="https://www.lynda.com/Sass-tutorials/Sass-Essential-Training/375925-2.html"
+            target="_blank"> Ray Villalobos</a>.</li>
+
+        </ol>
+    </div>
+
 <!-- These Javascript links are required for the proper functionality of Bootstrap. And they should always be placed at the very end, near to the closing body tag. -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
